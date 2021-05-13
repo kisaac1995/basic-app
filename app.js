@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get("/", (req, res) => {
-
-    res.send("I'm working!");
-
+app.get("/:message", (req, res) => {
+    res.send(req.params.message);
 });
 
 app.listen(5000);
